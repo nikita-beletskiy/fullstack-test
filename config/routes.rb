@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
-  resources :projects
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  resources :projects, :todos
+  
+  patch '/projects/:id/todo/:id', to: 'projects#todo_update'
 end
